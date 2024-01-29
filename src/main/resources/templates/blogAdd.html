@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить пост</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h2 {
+            color: #333;
+        }
+
+        .post p {
+            color: #666;
+        }
+
+        .add {
+          text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        form textarea {
+            height: 150px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+          background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+  <h1>Добавить пост</h1>
+</header>
+
+<nav>
+  <a href="/">Главная</a>
+  <a href="/blog/add">Добавить пост</a>
+  <a href="/blog">Все посты</a>
+  <a href="/about">О нас</a>
+</nav>
+
+<div class="container">
+
+  <div class="post">
+    <h1 class="add">Добавить новый пост</h1>
+    <form action="/blog/add" method="post">
+      <input type="text" name="title" placeholder="Введите название поста">
+      <input type="text" name="anons" placeholder="Введите анонс">
+      <textarea type="text" name="fullText" placeholder="Введите текст"></textarea>
+      <button type="submit">Добавить</button>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2024 Мой веб-блог.</p>
+</footer>
+</body>
+</html>
