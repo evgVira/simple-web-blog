@@ -1,9 +1,6 @@
 package com.example.simpletestblog.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,14 +16,17 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "title")
     private String title;
+    @Column(name = "fullText", columnDefinition = "text")
     private String fullText;
 
+    @Column(name = "anons")
     private String anons;
 
-    public Post(String title, String fullText, String anons) {
+    public Post(String title, String anons, String fullText) {
         this.title = title;
-        this.fullText = fullText;
         this.anons = anons;
+        this.fullText = fullText;
     }
 }

@@ -2,15 +2,11 @@ package com.example.simpletestblog.controllers;
 
 import com.example.simpletestblog.models.Post;
 import com.example.simpletestblog.repository.PostRepository;
-import org.hibernate.annotations.Array;
-import org.hibernate.annotations.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Controller
